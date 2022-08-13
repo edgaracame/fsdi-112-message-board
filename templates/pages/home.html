@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.imgur.com/Bf1fONj.png" class="d-block w-100" alt="welcome1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.imgur.com/5WczDxS.png" class="d-block w-100" alt="welcome2">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-center">
+            <div class="card border-primary" style="margin: 25px;">
+                <div class="card-header text-bg-primary">
+                    <h1>WHAT IS MESSAGE BOARD?</h1>
+                </div>
+                <div class="card-body text-primary">
+                    <p class="card-text">Message Board is a web tool you can use to share your ideas and knowledge to the world! Let your thoughts travels around the world with your messages!</p>
+                    <p class="card-text" style="font-weight:bold;">If you want to know more about Message Board you'll have to try it!</p>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="margin: 25px;">
+                <div class="card-header text-bg-primary">
+                    <h1>HOW TO USE MESSAGE BOARD?</h1>
+                </div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title" style="font-weight:bold;">See the Posts</h5>
+                    <p class="card-text">Do you want to enter to other people minds? Go check their posts!</p>
+                    <a href="{% url 'post_list' %}" class="btn btn-primary" style="margin-bottom: 25px;">Posts List</a>
+
+                    <h5 class="card-title" style="font-weight:bold;">Create a Post</h5>
+                    <p class="card-text">To start your board just write your idea with the required information and let's see who likes it!</p>
+                    <a href="{% url 'post_new' %}" class="btn btn-primary" style="margin-bottom: 10px;">New Post</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

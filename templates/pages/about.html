@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+<style>
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+</style>
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+    <div class="container text-center" style="margin-top: 25px;">
+        <div class="row">
+            <div class="col">
+                <div class="container-fluid">
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13428.662314308696!2d-117.1549581!3d32.7082276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb1759c2aecbcc473!2sSan%20Diego%20Global%20Knowledge%20University!5e0!3m2!1ses-419!2smx!4v1660408616013!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:2px solid #0d6efd" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-primary" style="margin-top:10px;">
+                    <div class="card-header text-bg-primary">
+                        <h1>OUR COMPANY</h1>
+                    </div>
+                    <div class="card-body text-primary">
+                        <blockquote class="blockquote mb-0">
+                            <p>We are software company that wants to help the world to be heard! We want to create a space for the people who have something to say and can be interesting to other because everyone deserves the opportunity to say something.</p>
+                            <footer class="blockquote-footer">Edgar Castillo</footer>
+                        </blockquote>                      
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="margin-top:10px;">
+                    <div class="card-header text-bg-primary">
+                        <h1>CONTACT US</h1>
+                    </div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Visit us!</h5>
+                        <p class="card-text">Come to our installations, you are welcome.</p>     
+                        
+                        <h5 class="card-title">Tell us your opinion!</h5>
+                        <p class="card-text"><i class="fa-solid fa-phone"></i> 555-000-333 &nbsp;<i class="fa-solid fa-envelope"></i> edgar@mail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

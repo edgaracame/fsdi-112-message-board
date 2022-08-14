@@ -13,7 +13,9 @@
                     <div class="card-body text-primary">
                         <h5 class="card-title">{{ post.title }}</h5>
                         <p class="card-text">{{ post.subtitle }}</p>
+                        <p class="card-text">{{ post.body|truncatechars:500 }}</p>
                         <p class="card-text text-end" style="font-size:10px;">{{ post.created_on }}</p>
+                        <a href="{% url 'post_detail' post.id %}" class="card-text" style="font-size:12px;">Read more...</a>
                     </div>
                 </div>
             </div>

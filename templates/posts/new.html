@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 
-{% load crispy_forms_tags %}
-
 {% block title %}New Post{% endblock title %}
 
 {% block content %}
@@ -11,9 +9,15 @@
         <form method="POST" class="text-primary">
             {% csrf_token %}
             <div class="form-group">
-                {{ form|crispy }}
+                {{ form.as_p }}
             </div>
             <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Create</button>
         </form>
     </div>
+
+    <style>
+        label{
+            margin-top:10px;
+        }
+    </style>
 {% endblock content %}
